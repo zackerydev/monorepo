@@ -1,5 +1,6 @@
 common-env: &common-env
   AUTH_SERVICE: http://auth-service
+  HEALTHCHECK_PATH: /healthz
   DATADOG_HOST: datadog:8096
   DATADOG_PORT: "8125"
   DATADOG_TRACE_HOST: datadog:8126

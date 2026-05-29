@@ -1,0 +1,1449 @@
+auth-service:
+  port: 8000
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: auth-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8000"
+
+billing-service:
+  port: 8001
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: billing-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8001"
+
+catalog-service:
+  port: 8002
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: catalog-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8002"
+
+checkout-service:
+  port: 8003
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: checkout-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8003"
+
+cart-service:
+  port: 8004
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: cart-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8004"
+
+search-service:
+  port: 8005
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: search-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8005"
+
+recs-service:
+  port: 8006
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: recs-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8006"
+
+inventory-service:
+  port: 8007
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: inventory-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8007"
+
+shipping-service:
+  port: 8008
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: shipping-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8008"
+
+tax-service:
+  port: 8009
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: tax-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8009"
+
+fraud-service:
+  port: 8010
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: fraud-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8010"
+
+risk-service:
+  port: 8011
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: risk-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8011"
+
+notifications-service:
+  port: 8012
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: notifications-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8012"
+
+email-service:
+  port: 8013
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: email-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8013"
+
+sms-service:
+  port: 8014
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: sms-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8014"
+
+push-service:
+  port: 8015
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: push-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8015"
+
+analytics-service:
+  port: 8016
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: analytics-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8016"
+
+events-service:
+  port: 8017
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: events-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8017"
+
+metrics-service:
+  port: 8018
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: metrics-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8018"
+
+logs-service:
+  port: 8019
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: logs-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8019"
+
+tracing-service:
+  port: 8020
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: tracing-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8020"
+
+feature-flags-service:
+  port: 8021
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: feature-flags-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8021"
+
+config-service:
+  port: 8022
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: config-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8022"
+
+secrets-service:
+  port: 8023
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: secrets-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8023"
+
+identity-service:
+  port: 8024
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: identity-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8024"
+
+session-service:
+  port: 8025
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: session-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8025"
+
+profile-service:
+  port: 8026
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: profile-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8026"
+
+preferences-service:
+  port: 8027
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: preferences-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8027"
+
+loyalty-service:
+  port: 8028
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: loyalty-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8028"
+
+coupons-service:
+  port: 8029
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: coupons-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8029"
+
+promotions-service:
+  port: 8030
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: promotions-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8030"
+
+pricing-service:
+  port: 8031
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: pricing-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8031"
+
+orders-service:
+  port: 8032
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: orders-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8032"
+
+returns-service:
+  port: 8033
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: returns-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8033"
+
+warranty-service:
+  port: 8034
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: warranty-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8034"
+
+support-service:
+  port: 8035
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: support-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8035"
+
+chat-service:
+  port: 8036
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: chat-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8036"
+
+reviews-service:
+  port: 8037
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: reviews-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8037"
+
+ratings-service:
+  port: 8038
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: ratings-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8038"
+
+media-service:
+  port: 8039
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: media-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8039"
+
+images-service:
+  port: 8040
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: images-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8040"
+
+videos-service:
+  port: 8041
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: videos-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8041"
+
+uploads-service:
+  port: 8042
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: uploads-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8042"
+
+downloads-service:
+  port: 8043
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: downloads-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8043"
+
+exports-service:
+  port: 8044
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: exports-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8044"
+
+imports-service:
+  port: 8045
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: imports-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8045"
+
+reports-service:
+  port: 8046
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: reports-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8046"
+
+admin-service:
+  port: 8047
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: admin-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8047"
+
+internal-api-service:
+  port: 8048
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: internal-api-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8048"
+
+gateway-service:
+  port: 8049
+  env:
+    AUTH_SERVICE: http://auth-service
+    DATADOG_HOST: datadog:8096
+    DATADOG_PORT: "8125"
+    DATADOG_TRACE_HOST: datadog:8126
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+    OTEL_SERVICE_NAME: gateway-service
+    LOG_LEVEL: info
+    LOG_FORMAT: json
+    ENVIRONMENT: production
+    REGION: us-east-1
+    CLUSTER: prod-1
+    KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+    KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+    REDIS_HOST: redis-master
+    REDIS_PORT: "6379"
+    POSTGRES_HOST: pg-primary.internal
+    POSTGRES_PORT: "5432"
+    POSTGRES_SSLMODE: require
+    VAULT_ADDR: https://vault.internal:8200
+    CONSUL_ADDR: http://consul.internal:8500
+    FEATURE_FLAGS_URL: http://feature-flags:7000
+    METRICS_ENABLED: "true"
+    TRACING_ENABLED: "true"
+    SHUTDOWN_GRACE_SECONDS: "30"
+    SERVICE_PORT: "8049"

@@ -1,0 +1,382 @@
+common-env: &common-env
+  AUTH_SERVICE: http://auth-service
+  DATADOG_HOST: datadog:8096
+  DATADOG_PORT: "8125"
+  DATADOG_TRACE_HOST: datadog:8126
+  OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+  LOG_LEVEL: info
+  LOG_FORMAT: json
+  ENVIRONMENT: production
+  REGION: us-east-1
+  CLUSTER: prod-1
+  REDIS_HOST: redis-master
+  REDIS_PORT: "6379"
+  POSTGRES_HOST: pg-primary.internal
+  POSTGRES_PORT: "5432"
+  POSTGRES_SSLMODE: require
+  VAULT_ADDR: https://vault.internal:8200
+  CONSUL_ADDR: http://consul.internal:8500
+  FEATURE_FLAGS_URL: http://feature-flags:7000
+  METRICS_ENABLED: "true"
+  TRACING_ENABLED: "true"
+  SHUTDOWN_GRACE_SECONDS: "30"
+
+kafka-env: &kafka-env
+  KAFKA_BROKERS: kafka-0:9092,kafka-1:9092,kafka-2:9092
+  KAFKA_SCHEMA_REGISTRY: http://schema-registry:8081
+  KAFKA_CONSUMER_GROUP_PREFIX: prod
+  KAFKA_AUTO_OFFSET_RESET: earliest
+  KAFKA_SESSION_TIMEOUT_MS: "30000"
+
+max-conc: &maxConc
+  MAX_CONCURRENCY: "48"
+
+auth-service:
+  port: 8000
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: auth-service
+    SERVICE_PORT: "8000"
+
+billing-service:
+  port: 8001
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: billing-service
+    SERVICE_PORT: "8001"
+
+catalog-service:
+  port: 8002
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: catalog-service
+    SERVICE_PORT: "8002"
+
+checkout-service:
+  port: 8003
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: checkout-service
+    SERVICE_PORT: "8003"
+
+cart-service:
+  port: 8004
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: cart-service
+    SERVICE_PORT: "8004"
+
+search-service:
+  port: 8005
+  env:
+    <<: [*common-env, *maxConc]
+    OTEL_SERVICE_NAME: search-service
+    SERVICE_PORT: "8005"
+
+recs-service:
+  port: 8006
+  env:
+    <<: [*common-env, *maxConc]
+    OTEL_SERVICE_NAME: recs-service
+    SERVICE_PORT: "8006"
+
+inventory-service:
+  port: 8007
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: inventory-service
+    SERVICE_PORT: "8007"
+
+shipping-service:
+  port: 8008
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: shipping-service
+    SERVICE_PORT: "8008"
+
+tax-service:
+  port: 8009
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: tax-service
+    SERVICE_PORT: "8009"
+
+fraud-service:
+  port: 8010
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: fraud-service
+    SERVICE_PORT: "8010"
+
+risk-service:
+  port: 8011
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: risk-service
+    SERVICE_PORT: "8011"
+
+notifications-service:
+  port: 8012
+  env:
+    <<: [*common-env, *kafka-env]
+    OTEL_SERVICE_NAME: notifications-service
+    SERVICE_PORT: "8012"
+
+email-service:
+  port: 8013
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: email-service
+    SERVICE_PORT: "8013"
+
+sms-service:
+  port: 8014
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: sms-service
+    SERVICE_PORT: "8014"
+
+push-service:
+  port: 8015
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: push-service
+    SERVICE_PORT: "8015"
+
+analytics-service:
+  port: 8016
+  env:
+    <<: [*common-env, *kafka-env]
+    OTEL_SERVICE_NAME: analytics-service
+    SERVICE_PORT: "8016"
+
+events-service:
+  port: 8017
+  env:
+    <<: [*common-env, *kafka-env]
+    OTEL_SERVICE_NAME: events-service
+    SERVICE_PORT: "8017"
+
+metrics-service:
+  port: 8018
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: metrics-service
+    SERVICE_PORT: "8018"
+
+logs-service:
+  port: 8019
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: logs-service
+    SERVICE_PORT: "8019"
+
+tracing-service:
+  port: 8020
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: tracing-service
+    SERVICE_PORT: "8020"
+
+feature-flags-service:
+  port: 8021
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: feature-flags-service
+    SERVICE_PORT: "8021"
+
+config-service:
+  port: 8022
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: config-service
+    SERVICE_PORT: "8022"
+
+secrets-service:
+  port: 8023
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: secrets-service
+    SERVICE_PORT: "8023"
+
+identity-service:
+  port: 8024
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: identity-service
+    SERVICE_PORT: "8024"
+
+session-service:
+  port: 8025
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: session-service
+    SERVICE_PORT: "8025"
+
+profile-service:
+  port: 8026
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: profile-service
+    SERVICE_PORT: "8026"
+
+preferences-service:
+  port: 8027
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: preferences-service
+    SERVICE_PORT: "8027"
+
+loyalty-service:
+  port: 8028
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: loyalty-service
+    SERVICE_PORT: "8028"
+
+coupons-service:
+  port: 8029
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: coupons-service
+    SERVICE_PORT: "8029"
+
+promotions-service:
+  port: 8030
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: promotions-service
+    SERVICE_PORT: "8030"
+
+pricing-service:
+  port: 8031
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: pricing-service
+    SERVICE_PORT: "8031"
+
+orders-service:
+  port: 8032
+  env:
+    <<: [*common-env, *kafka-env]
+    OTEL_SERVICE_NAME: orders-service
+    SERVICE_PORT: "8032"
+
+returns-service:
+  port: 8033
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: returns-service
+    SERVICE_PORT: "8033"
+
+warranty-service:
+  port: 8034
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: warranty-service
+    SERVICE_PORT: "8034"
+
+support-service:
+  port: 8035
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: support-service
+    SERVICE_PORT: "8035"
+
+chat-service:
+  port: 8036
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: chat-service
+    SERVICE_PORT: "8036"
+
+reviews-service:
+  port: 8037
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: reviews-service
+    SERVICE_PORT: "8037"
+
+ratings-service:
+  port: 8038
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: ratings-service
+    SERVICE_PORT: "8038"
+
+media-service:
+  port: 8039
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: media-service
+    SERVICE_PORT: "8039"
+
+images-service:
+  port: 8040
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: images-service
+    SERVICE_PORT: "8040"
+
+videos-service:
+  port: 8041
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: videos-service
+    SERVICE_PORT: "8041"
+
+uploads-service:
+  port: 8042
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: uploads-service
+    SERVICE_PORT: "8042"
+
+downloads-service:
+  port: 8043
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: downloads-service
+    SERVICE_PORT: "8043"
+
+exports-service:
+  port: 8044
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: exports-service
+    SERVICE_PORT: "8044"
+
+imports-service:
+  port: 8045
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: imports-service
+    SERVICE_PORT: "8045"
+
+reports-service:
+  port: 8046
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: reports-service
+    SERVICE_PORT: "8046"
+
+admin-service:
+  port: 8047
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: admin-service
+    SERVICE_PORT: "8047"
+
+internal-api-service:
+  port: 8048
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: internal-api-service
+    SERVICE_PORT: "8048"
+
+gateway-service:
+  port: 8049
+  env:
+    <<: *common-env
+    OTEL_SERVICE_NAME: gateway-service
+    SERVICE_PORT: "8049"

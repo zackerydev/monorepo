@@ -328,7 +328,7 @@ videos-service:
 uploads-service:
   port: 8042
   env:
-    <<: *common-env
+    <<: [*common-env, *maxConc]
     OTEL_SERVICE_NAME: uploads-service
     SERVICE_PORT: "8042"
 
